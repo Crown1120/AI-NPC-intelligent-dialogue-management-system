@@ -100,4 +100,4 @@
 - **次版本号**：向后兼容的功能新增
 - **修订号**：向后兼容的问题修复
 
-[1.0.0]: https://github.com/SkyCrown111/ai-npc-management-system/releases/tag/v1.0.0
+[1.0.0]: https://github.com/SkyCrown111/AI-NPC-intelligent-dialogue-management-system/releases/tag/v1.0.0

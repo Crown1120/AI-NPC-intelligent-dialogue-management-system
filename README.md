@@ -149,8 +149,8 @@ AI NPC 智能对话管理系统是一个面向游戏开发者的 NPC 管理平�
 #### 1. 克隆项目
 
 ```bash
-git clone https://github.com/SkyCrown111/ai-npc-management-system.git
-cd ai-npc-management-system
+git clone https://github.com/SkyCrown111/AI-NPC-intelligent-dialogue-management-system.git
+cd AI-NPC-intelligent-dialogue-management-system
 ```
 
 #### 2. 后端安装
@@ -536,8 +536,8 @@ npm run build
 
 ## 📞 联系方式
 
-- 项目地址: [GitHub](https://github.com/SkyCrown111/ai-npc-management-system)
-- 问题反馈: [Issues](https://github.com/SkyCrown111/ai-npc-management-system/issues)
+- 项目地址: [GitHub](https://github.com/SkyCrown111/AI-NPC-intelligent-dialogue-management-system)
+- 问题反馈: [Issues](https://github.com/SkyCrown111/AI-NPC-intelligent-dialogue-management-system/issues)
 
 ---
 
