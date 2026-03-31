@@ -1,0 +1,21 @@
+server:
+  port: 8080
+
+jwt:
+  secret: your-256-bit-secret-your-256-bit-secret-your-256-bit-secret
+  expiration: 86400000
+
+agent:
+  python-url: http://localhost:8000
+
+spring:
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.mongo.MongoAutoConfiguration
+      - org.springframework.boot.autoconfigure.data.mongo.MongoDataAutoConfiguration
+      - org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
+      - org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration
+
+logging:
+  level:
+    org.springframework.security: DEBUG

@@ -1,0 +1,5 @@
+export { default as NpcListPage } from './NpcListPage'
+export { default as NpcTestPage } from './NpcTestPage'
+export { default as LogsPage } from './LogsPage'
+export { default as StatsPage } from './StatsPage'
+export { default as SettingsPage } from './SettingsPage'

@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: game-ai-gateway
+  data:
+    mongodb:
+      uri: ${MONGODB_URI:mongodb://admin:admin123@mongodb:27017/game_ai?authSource=admin}
+    redis:
+      host: ${REDIS_HOST:redis}
+      port: ${REDIS_PORT:6379}
+
+jwt:
+  secret: your-256-bit-secret-your-256-bit-secret-your-256-bit-secret
+  expiration: 86400000
+
+agent:
+  python-url: ${AGENT_PYTHON_URL:http://python-agent:8000}

@@ -1,0 +1,63 @@
+version: '3.8'
+services:
+  mongodb:
+    image: mongo:6.0
+    container_name: game_ai_mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: admin123
+    networks:
+      - game-network
+  redis:
+    image: redis:7.2-alpine
+    container_name: game_ai_redis
+    ports:
+      - "6379:6379"
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_data:/data
+    networks:
+      - game-network
+  rabbitmq:
+    image: rabbitmq:3.12-management
+    container_name: game_ai_rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin123
+    networks:
+      - game-network
+
+  java-gateway:
+    build: ./backend_java
+    container_name: game_ai_java_gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mongodb
+      - redis
+      - python-agent
+    networks:
+      - game-network
+
+  python-agent:
+    build: ./backend_python
+    container_name: game_ai_python_agent
+    ports:
+      - "8000:8000"
+    networks:
+      - game-network
+
+networks:
+  game-network:
+    driver: bridge
+
+volumes:
+  mongo_data:
+  redis_data:
